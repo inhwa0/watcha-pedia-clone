@@ -1,0 +1,34 @@
+<div>
+    <v-main class="grey lighten-1">
+        <v-container fluid style="width: 90%">
+            <v-row>
+                <template v-for="n in 5">
+                    <v-col :key="n"
+                           class="mt-8 "
+                           cols="12"
+                           style="background-color: grey"
+                    >
+                        <strong style="color: aliceblue">Category {{ n }}</strong>
+                    </v-col>
+                    <v-col v-for="j in 6"
+                           :key="`${n}${j}`"
+                           class="grey lighten-2"
+                           cols="4"
+                           md="2"
+                    >
+                        <v-skeleton-loader v-if="isSkeleton"
+                                           v-bind="attrs"
+                                           type="image, article"></v-skeleton-loader>
+                        <!--                        <v-sheet v-else height="160" style="background-color: #404f64"></v-sheet>-->
+                        <div v-else>
+                            <img alt=""
+                                 src="https://an2-img.amz.wtchn.net/image/v2/30fc2e3f5d4f9b2c13a1b02e4901fd57.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKaVlXTnJaM0p2ZFc1a0lqcDdJbklpT2pJMU5Td2laeUk2TWpVMUxDSmlJam95TlRWOUxDSmpjbTl3SWpwMGNuVmxMQ0pvWldsbmFIUWlPakkxTUN3aWNHRjBhQ0k2SWk5Mk1pOXpkRzl5WlM5cGJXRm5aUzh4TmpBNU9UZzFNakE1TURjeU56VTFNVEkzSWl3aWNYVmhiR2wwZVNJNk9EQXNJbmRwWkhSb0lqb3hOamQ5LmQweXRoZ3VPOFVoOGpqRnRUQmVzWDJBNVNFTVY1cUpVY3cwR2tjQWM2U0k">
+                        </div>
+                    </v-col>
+                </template>
+
+            </v-row>
+        </v-container>
+    </v-main>
+
+</div>

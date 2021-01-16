@@ -1,0 +1,22 @@
+<div>
+    <div>Home!!!</div>
+
+    <div>
+
+        {{ $t('dataIterator.rowsPerPageText') }}
+    </div>
+    <div>
+        {{ $t('message.hello') }}
+    </div>
+
+    <v-btn @click="onClickChangeLocal">영어로 변경</v-btn>
+
+
+    <div>
+        <label>
+            <select v-model="$i18n.locale">
+                <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
+            </select>
+        </label>
+    </div>
+</div>
